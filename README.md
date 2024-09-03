@@ -1,5 +1,5 @@
 # <b>❄️AIR CONDITIONER MANAGER❄️</b>
-# Gestione Condizionatore Smart e non-Smart con spegnimento e riaccensione a seconda dello stato di una o piu finestre con notifiche su Alexa.
+# Gestione del tuo condizionatore Smart e non-Smart, con spegnimento e riaccensione a seconda dello stato di una o piu finestre con notifiche su Alexa.
 
 Questo è il mio primo package perciò siate clementi nel caso incontriate difficoltà di comprensione/funzionamento :D
 

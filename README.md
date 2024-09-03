@@ -18,11 +18,11 @@ Per installare questo package è necessario:
 
   - Per non complicare il codice ho preferito usare delle scene, quindi assicurarsi che il nostro telecomando universale sia installato e funzionante su Home assistant e quindi creare delle scene come segue:
 
-        scene.heat ----> creare una scena che invia il comando IR al condizionatore impostandolo su Caldo
-        scene.cool ----> creare una scena che invia il comando IR al condizionatore impostandolo su Freddo
-        scene.auto ----> creare una scena che invia il comando IR al condizionatore impostandolo su Auto
-        scene.dry ----> creare una scena che invia il comando IR al condizionatore impostandolo su Deumidificatore
-        scene.aircon_off ----> creare una scena che invia il comando IR che spegne il condizionatore
+        scene.heat        # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Caldo
+        scene.cool        # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Freddo
+        scene.auto        # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Auto
+        scene.dry         # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Deumidificatore
+        scene.aircon_off  # ----> creare una scena che invia il comando IR che spegne il condizionatore
 
     Una volta create le scene assicurarsi che le entità delle scene si chiamino esattamente come sopracitato.
 

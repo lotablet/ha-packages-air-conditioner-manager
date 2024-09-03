@@ -36,3 +36,8 @@ Per installare questo package è necessario:
 
   - Scaricare "air_conditioner_manager_smart.yaml" ed inserire il file nella cartella package
   - Compilare la sezione IMPOSTAZIONI e successivamente riavviare
+
+
+Per qualsiasi problema riscontrato, aprire un ticket nella sezione apposita.
+
+Enjoy :D

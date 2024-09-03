@@ -16,7 +16,7 @@ Per installare questo package è necessario:
 
 *INSTALLAZIONE PACKAGE*
 
-  - Per non complicare il codice ho preferito usare delle scene, quindi assicurarsi che il nostro telecomando universale sia installato e funzionante su Home assistant e quindi creare delle scene come segue:
+  - Per non complicare il codice ho preferito usare delle scene, quindi assicurarsi che il nostro telecomando universale sia installato e funzionante su Home assistant e quindi creare delle scene su Home Assistant con i seguenti nomi delle entità *scene*:
 
         scene.heat        # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Caldo
         scene.cool        # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Freddo
@@ -24,7 +24,7 @@ Per installare questo package è necessario:
         scene.dry         # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Deumidificatore
         scene.aircon_off  # ----> creare una scena che invia il comando IR che spegne il condizionatore
 
-    Una volta create le scene assicurarsi che le entità delle scene si chiamino esattamente come sopracitato.
+    NOTA: assicurarsi che le entità delle scene si chiamino esattamente come sopracitato.
 
   - Installare [Template Climate](https://github.com/jcwillox/hass-template-climate) da [HACS](https://github.com/hacs/integration), scaricare l'addon e riavviare.
   - Scaricare "air_conditioner_manager_non_smart.yaml" ed inserire il file nella cartella package

@@ -11,6 +11,7 @@ Per installare questo package è necessario:
   - Avere il componente [Alexa](https://github.com/alandtse/alexa_media_player) installato e funzionante.
   - Avere Home Assistant aggiornato all'ultima versione.
   - In caso di condizionatore non-Smart, avere un telecomando IR universale (es. Broadlink, Tuya, etc.)
+  - 
 <b>PACKAGE PER CONDIZIONATORI NON SMART</b>
 
 *INSTALLAZIONE PACKAGE*

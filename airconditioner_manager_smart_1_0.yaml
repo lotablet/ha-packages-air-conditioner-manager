@@ -2,7 +2,7 @@ homeassistant:
   customize:
     package.node_anchors:
       customize: &customize
-        package: 'Gestione Condizionatore Smart'
+        package: 'Air Conditioner Manager 1.0'
         author: 'LoTableT'
 #
 #   PREMESSA: 

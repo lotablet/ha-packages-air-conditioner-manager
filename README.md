@@ -24,12 +24,12 @@ Prima cosa da fare è creare la cartella package all'interno del nostro server d
     Una volta create le scene assicurarsi che le entità delle scene si chiamino esattamente come sopracitato.
 
   - Installare [Template Climate](https://github.com/jcwillox/hass-template-climate) da [HACS](https://github.com/hacs/integration), scaricare l'addon e riavviare.
-
+  - Scaricare "air_conditioner_manager_non_smart.yaml" ed inserire il file nella cartella package
   - Configurare il package seguendo le istruzioni al suo interno.
 
 
 <b>PACKAGE PER CONDIZIONATORI SMART</b>
 *INSTALLAZIONE PACKAGE*
 
-  - Scaricare "gestione_condizionatore_smart.yaml" ed inserire il file nella cartella package
+  - Scaricare "air_conditioner_manager_smart.yaml" ed inserire il file nella cartella package
   - Compilare la sezione IMPOSTAZIONI e successivamente riavviare

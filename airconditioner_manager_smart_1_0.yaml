@@ -4,14 +4,15 @@ homeassistant:
       customize: &customize
         package: 'Air Conditioner Manager 1.0'
         author: 'LoTableT'
+        reference: " https://github.com/lotablet/ha-package-air-conditioner-manager "
 #
 #   PREMESSA: 
 #   - è neccessario avere home assistant AGGIORNATO all'ultima versione sennò le automazioni non funzioneranno.
 #   - avere un sensore o piu sensori che rilevano l'apertura e chiusura di una o piu finestre
 #
-##################
-## IMPOSTAZIONI ##
-##################
+                            ####################
+                            ### IMPOSTAZIONI ###
+                            ####################
 #
 #
 # SOSTITUISCI I VARI NOMI DEI SENSORI CON I TUOI SENSORI, I NOMI DA SOSTITUIRE SONO IN MAIUSCOLO
@@ -37,11 +38,28 @@ homeassistant:
 # Questo è un binary sensor che comprende più finestre, sostituire i vari binary_sensor 
 # (finestra1, finestra2, finestra3) con i nomi effettivi delle entità che si 
 # vogliono nel gruppo.
+#
 # ATTENZIONE: ricorda di aggiungere "binary_sensor.gruppo_finestre" nella sezione
 # IMPOSTAZIONI - SENSORE FINESTRA per utilizzare questo binary_sensor se si vuole usare il gruppo finestre
-#####################
 #
 #
+binary_sensor:
+  - platform: template
+    sensors:
+      gruppo_finestre:
+        friendly_name: 'Gruppo Finestre'
+        device_class: window
+        value_template: >
+          {% set sensors = [states.binary_sensor.finestra1,
+                            states.binary_sensor.finestra2,
+                            states.binary_sensor.finestra3] %}
+          {{ sensors | selectattr('state','eq','on') | list | count > 0 }}
+
+#
+#
+#################################################################
+###################### FINE DELLE IMPOSTAZIONI ##################
+#################################################################
 #
 #
 #############

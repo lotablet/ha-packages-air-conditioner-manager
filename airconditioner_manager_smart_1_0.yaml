@@ -143,6 +143,7 @@ automation:
             - data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Automatica"
+	      action: notify.alexa_media
     - choose:
         - conditions:
             - condition: state
@@ -185,6 +186,7 @@ automation:
             - data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Deumidificatore "
+	      action: notify.alexa_media
     - choose:
         - conditions:
             - condition: state
@@ -270,12 +272,13 @@ automation:
             - data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Caldo"
+ 	      action: notify.alexa_media
 - alias: Package Gestione Clima - Clima Gia Acceso
   description: ""
   trigger:
     - platform: state
       entity_id:
-        - *condizionatore
+        *condizionatore
       to: dry
       for:
         hours: 0
@@ -284,7 +287,7 @@ automation:
       id: dry
     - platform: state
       entity_id:
-        - *condizionatore
+        *condizionatore
       to: cool
       for:
         hours: 0
@@ -293,7 +296,7 @@ automation:
       id: cool
     - platform: state
       entity_id:
-        - *condizionatore
+        *condizionatore
       for:
         hours: 0
         minutes: 0
@@ -302,7 +305,7 @@ automation:
       to: auto
     - platform: state
       entity_id:
-        - *condizionatore
+        *condizionatore
       to: heat
       for:
         hours: 0
@@ -338,7 +341,7 @@ automation:
               data: {}
               target:
                 entity_id:
-                  - *condizionatore
+                  *condizionatore
             - delay:
                 hours: 0
                 minutes: 0
@@ -349,7 +352,7 @@ automation:
               data: {}
               target:
                 entity_id:
-                  - *condizionatore
+                  *condizionatore
             - wait_for_trigger:
                 - platform: state
                   entity_id:
@@ -401,7 +404,7 @@ automation:
               data: {}
               target:
                 entity_id:
-                  - *condizionatore
+                  *condizionatore
             - wait_for_trigger:
                 - platform: state
                   entity_id:
@@ -442,7 +445,7 @@ automation:
               data: {}
               target:
                 entity_id:
-                  - *condizionatore
+                  *condizionatore
             - delay:
                 hours: 0
                 minutes: 0
@@ -453,7 +456,7 @@ automation:
               data: {}
               target:
                 entity_id:
-                  - *condizionatore
+                  *condizionatore
             - wait_for_trigger:
                 - platform: state
                   entity_id:
@@ -494,7 +497,7 @@ automation:
               data: {}
               target:
                 entity_id:
-                  - *condizionatore
+                  *condizionatore
             - delay:
                 hours: 0
                 minutes: 0
@@ -505,7 +508,7 @@ automation:
               data: {}
               target:
                 entity_id:
-                  - *condizionatore
+                  *condizionatore
             - wait_for_trigger:
                 - platform: state
                   entity_id:
@@ -527,5 +530,3 @@ automation:
                 message: "Riaccendo il condizionatore in modalità Caldo"
               action: notify.alexa_media
   mode: single
-
-  

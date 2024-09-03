@@ -8,6 +8,7 @@ Questi 2 package comprendono la gestione di un condizionatore smart e non-smart,
 <b>*PACKAGE PER CONDIZIONATORI NON SMART*</b>
 
 *INSTALLAZIONE PACKAGE*
+
 Prima cosa da fare è creare la cartella package all'interno del nostro server di home assistant:
   
   Si puo utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) o [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
@@ -29,5 +30,6 @@ Prima cosa da fare è creare la cartella package all'interno del nostro server d
 
 <b>*PACKAGE PER CONDIZIONATORI SMART*</b>
 *INSTALLAZIONE PACKAGE*
+
   - Scaricare "gestione_condizionatore_smart.yaml" ed inserire il file nella cartella package
   - Compilare la sezione IMPOSTAZIONI e successivamente riavviare

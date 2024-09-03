@@ -10,7 +10,7 @@ Per installare questo package è necessario:
       Si puo utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) o [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
   - Avere il componente [Alexa](https://github.com/alandtse/alexa_media_player) installato e funzionante.
   - Avere Home Assistant aggiornato all'ultima versione.
-
+  - In caso di condizionatore non-Smart, avere un telecomando IR universale (es. Broadlink, Tuya, etc.)
 <b>PACKAGE PER CONDIZIONATORI NON SMART</b>
 
 *INSTALLAZIONE PACKAGE*

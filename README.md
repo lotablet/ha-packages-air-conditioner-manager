@@ -5,7 +5,7 @@ Questo è il mio primo package perciò siate clementi nel caso incontriate diffi
 Questi 2 package comprendono la gestione di un condizionatore smart e non-smart, gestendo l'accensione e lo spegnimento in caso di apertura di una o piu finestre, e avere delle notifiche su alexa quando viene spento o riacceso il condizionatore.
 
 
-<b>*PACKAGE PER CONDIZIONATORI NON SMART*</b>
+<b>PACKAGE PER CONDIZIONATORI NON SMART</b>
 
 *INSTALLAZIONE PACKAGE*
 
@@ -28,7 +28,7 @@ Prima cosa da fare è creare la cartella package all'interno del nostro server d
   - Configurare il package seguendo le istruzioni al suo interno.
 
 
-<b>*PACKAGE PER CONDIZIONATORI SMART*</b>
+<b>PACKAGE PER CONDIZIONATORI SMART</b>
 *INSTALLAZIONE PACKAGE*
 
   - Scaricare "gestione_condizionatore_smart.yaml" ed inserire il file nella cartella package

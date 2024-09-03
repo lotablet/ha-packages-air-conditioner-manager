@@ -3,7 +3,8 @@ homeassistant:
     package.node_anchors:
       customize: &customize
         package: 'Air Conditioner Manager 1.0'
-        author: 'LoTableT'        
+        author: 'LoTableT'
+        reference: " https://github.com/lotablet/ha-package-air-conditioner-manager "
 ########################### PRIMA COSA DA FARE ########################### 
 ##   Aggiungere nella sezione "Archivi digitali personalizzati" questo	##
 ##   addon su HACS aggiungendo questo indirizzo come INTEGRAZIONE:      ##
@@ -35,9 +36,15 @@ homeassistant:
 #   da climate.condizonatore_virtuale in modo da fare funzionare tutto come si deve :D
 #
 #
-##################
-## IMPOSTAZIONI ##
-##################
+                          ####################
+                          ### IMPOSTAZIONI ###
+                          ####################
+#
+#
+############################
+## SENSORI E MEDIA PLAYER ##
+############################
+#
 #
 # SOSTITUISCI I VARI NOMI DEI SENSORI CON I TUOI SENSORI, I NOMI DA SOSTITUIRE SONO IN MAIUSCOLO
 # PUOI ANCHE IMPOSTARE DELLE FRASI PERSONALIZZATE SU ALEXA QUANDO VIENE SPENTO E RIACCESO IL CONDIZIONATORE QUANDO VIENE RILEVATA UNA FINESTRA APERTA.
@@ -121,8 +128,11 @@ binary_sensor:
                             states.binary_sensor.finestra2,
                             states.binary_sensor.finestra3] %}
           {{ sensors | selectattr('state','eq','on') | list | count > 0 }}
+#################################################################
+###################### FINE DELLE IMPOSTAZIONI ##################
+#################################################################
 #
-# 
+#
 ###################
 ## INPUT SELECT  ##
 ###################

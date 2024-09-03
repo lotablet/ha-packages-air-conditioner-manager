@@ -17,16 +17,16 @@ homeassistant:
 # SOSTITUISCI I VARI NOMI DEI SENSORI CON I TUOI SENSORI, I NOMI DA SOSTITUIRE SONO IN MAIUSCOLO
 # PUOI ANCHE IMPOSTAREUNA FRASE PERSONALIZZATA SU ALEXA QUANDO VIENE SPENTO IL CONDIZIONATORE QUANDO VIENE RILEVATA UNA FINESTRA APERTA.
       setting:
-        Sensore Finestra: &finestra "{% if is_state('binary_sensor.ILTUOSENSOREFINESTRA', 'on') %} Aperta {% else %} Chiusa {% endif %}"
+        Sensore Finestra: &finestra "{% if is_state('binary_sensor.window_status', 'on') %} Aperta {% else %} Chiusa {% endif %}"
         
-        Messaggio di alexa per finestre aperte: &messaggiospegni "Spengo il condizionatore perchè la finestra è aperta"
+        Messaggio di alexa per finestre aperte: &messaggiospegni "Spengo il condizionatore perchè le finestre sono aperte"
        
         
         Inserisci qui sotto il climatizzatore da controllare: &condizionatore
-          - climate.ilmiocondizionatore
+          - climate.clima_casa
        
         Inserisci qui sotto il media player di alexa: &alexa
-          - media_player.TUOALEXA
+          - media_player.sala
 #
 #
 #####################
@@ -42,17 +42,6 @@ homeassistant:
 #####################
 #
 #
-binary_sensor:
-  - platform: template
-    sensors:
-      gruppo_finestre:
-        friendly_name: 'Gruppo Finestre'
-        device_class: window
-        value_template: >
-          {% set sensors = [states.binary_sensor.finestra1,
-                            states.binary_sensor.finestra2,
-                            states.binary_sensor.finestra3] %}
-          {{ sensors | selectattr('state','eq','on') | list | count > 0 }}
 #
 #
 #############
@@ -114,10 +103,10 @@ automation:
                 entity_id: *condizionatore
               action: climate.turn_off
               data: {}
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - choose:
                 - conditions:
                     - condition: template
@@ -140,10 +129,10 @@ automation:
                 hvac_mode: auto
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Automatica"
-	      action: notify.alexa_media
     - choose:
         - conditions:
             - condition: state
@@ -157,10 +146,10 @@ automation:
                 entity_id: *condizionatore
               action: climate.turn_off
               data: {}
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - choose:
                 - conditions:
                     - condition: template
@@ -183,10 +172,10 @@ automation:
                 hvac_mode: dry
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Deumidificatore "
-	      action: notify.alexa_media
     - choose:
         - conditions:
             - condition: state
@@ -200,10 +189,10 @@ automation:
                 entity_id: *condizionatore
               action: climate.turn_off
               data: {}
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - choose:
                 - conditions:
                     - condition: template
@@ -226,10 +215,10 @@ automation:
                 hvac_mode: cool
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Freddo"
-              action: notify.alexa_media
     - choose:
         - conditions:
             - condition: state
@@ -243,10 +232,10 @@ automation:
                 entity_id: *condizionatore
               action: climate.turn_off
               data: {}
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - choose:
                 - conditions:
                     - condition: template
@@ -269,10 +258,10 @@ automation:
                 hvac_mode: heat
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Caldo"
- 	      action: notify.alexa_media
 - alias: Package Gestione Clima - Clima Gia Acceso
   description: ""
   trigger:
@@ -327,10 +316,10 @@ automation:
               id:
                 - dry
           sequence:
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - delay:
                 hours: 0
                 minutes: 0
@@ -369,20 +358,20 @@ automation:
                 hvac_mode: dry
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Deumidificatore "
-              action: notify.alexa_media
     - choose:
         - conditions:
             - condition: trigger
               id:
                 - cool
           sequence:
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - delay:
                 hours: 0
                 minutes: 0
@@ -421,20 +410,20 @@ automation:
                 hvac_mode: cool
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Freddo "
-              action: notify.alexa_media
     - choose:
         - conditions:
             - condition: trigger
               id:
                 - auto
           sequence:
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - delay:
                 hours: 0
                 minutes: 0
@@ -473,20 +462,20 @@ automation:
                 hvac_mode: auto
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Automatica "
-              action: notify.alexa_media
     - choose:
         - conditions:
             - condition: trigger
               id:
                 - heat
           sequence:
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: *messaggiospegni
-              action: notify.alexa_media
             - delay:
                 hours: 0
                 minutes: 0
@@ -525,8 +514,8 @@ automation:
                 hvac_mode: heat
               target:
                 entity_id: *condizionatore
-            - data:
+            - action: notify.alexa_media
+              data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Caldo"
-              action: notify.alexa_media
   mode: single

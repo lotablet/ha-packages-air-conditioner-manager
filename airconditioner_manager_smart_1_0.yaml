@@ -15,18 +15,18 @@ homeassistant:
 #
 #
 # SOSTITUISCI I VARI NOMI DEI SENSORI CON I TUOI SENSORI, I NOMI DA SOSTITUIRE SONO IN MAIUSCOLO
-# PUOI ANCHE IMPOSTAREUNA FRASE PERSONALIZZATA SU ALEXA QUANDO VIENE SPENTO IL CONDIZIONATORE QUANDO VIENE RILEVATA UNA FINESTRA APERTA.
+# PUOI ANCHE IMPOSTARE UNA FRASE PERSONALIZZATA SU ALEXA QUANDO VIENE SPENTO IL CONDIZIONATORE QUANDO VIENE RILEVATA UNA FINESTRA APERTA.
       setting:
-        Sensore Finestra: &finestra "{% if is_state('binary_sensor.window_status', 'on') %} Aperta {% else %} Chiusa {% endif %}"
+        Sensore Finestra: &finestra "{% if is_state('binary_sensor.TUAFINESTRA', 'on') %} Aperta {% else %} Chiusa {% endif %}"
         
-        Messaggio di alexa per finestre aperte: &messaggiospegni "Spengo il condizionatore perchè le finestre sono aperte"
+        Messaggio di alexa per finestre aperte: &messaggiospegni "Spengo il condizionatore perchè le finestra è aperta"
        
         
         Inserisci qui sotto il climatizzatore da controllare: &condizionatore
-          - climate.clima_casa
+          - climate.TUOCONDIZIONATORE
        
         Inserisci qui sotto il media player di alexa: &alexa
-          - media_player.sala
+          - media_player.TUOALEXA
 #
 #
 #####################

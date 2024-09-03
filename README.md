@@ -12,6 +12,8 @@ Per installare questo package è necessario:
   - Avere Home Assistant aggiornato all'ultima versione.
   - In caso di condizionatore non-Smart, avere un telecomando IR universale (es. Broadlink, Tuya, etc.)
   - Avere uno o piu sensori che rilevano apertura e chiusura di una finestra/portafinestra
+
+
 <b>PACKAGE PER CONDIZIONATORI NON SMART</b>
 
 *INSTALLAZIONE PACKAGE*
@@ -29,6 +31,8 @@ Per installare questo package è necessario:
   - Installare [Template Climate](https://github.com/jcwillox/hass-template-climate) da [HACS](https://github.com/hacs/integration), scaricare l'addon e riavviare.
   - Scaricare "air_conditioner_manager_non_smart.yaml" ed inserire il file nella cartella package
   - Configurare il package seguendo le istruzioni al suo interno.
+
+
 
 
 <b>PACKAGE PER CONDIZIONATORI SMART</b>

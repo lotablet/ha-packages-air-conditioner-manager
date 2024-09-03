@@ -7,7 +7,7 @@ Questi 2 package comprendono la gestione di un condizionatore smart e non-smart,
 
 Per installare questo package è necessario:
   - Creare la cartella package all'interno del nostro server di Home Assistant:
-      Si puo utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) o [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
+      Si possono utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) oppure [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
   - Avere il componente [Alexa](https://github.com/alandtse/alexa_media_player) installato e funzionante.
   - Avere Home Assistant aggiornato all'ultima versione.
   - Avere uno o piu sensori che rilevano apertura e chiusura di una finestra/portafinestra

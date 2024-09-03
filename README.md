@@ -6,8 +6,8 @@ Questo è il mio primo package perciò siate clementi nel caso incontriate diffi
 Questi 2 package comprendono la gestione di un condizionatore smart e non-smart, gestendo l'accensione e lo spegnimento in caso di apertura di una o piu finestre, e avere delle notifiche su alexa quando viene spento o riacceso il condizionatore.
 
 Per installare questo package è necessario:
-  - Creare la cartella package all'interno del nostro server di home assistant:
-    Si puo utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) o [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
+  - Creare la cartella package all'interno del nostro server di Home Assistant:
+      Si puo utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) o [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
   - Avere il componente [Alexa](https://github.com/alandtse/alexa_media_player) installato e funzionante.
   - Avere Home Assistant aggiornato all'ultima versione.
 

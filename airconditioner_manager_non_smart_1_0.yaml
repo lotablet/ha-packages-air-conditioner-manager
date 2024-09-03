@@ -2,9 +2,8 @@ homeassistant:
   customize:
     package.node_anchors:
       customize: &customize
-        package: 'Gestione Condizionatore'
-        author: 'LoTableT'
-        
+        package: 'Air Conditioner Manager 1.0'
+        author: 'LoTableT'        
 ########################### PRIMA COSA DA FARE ########################### 
 ##   Aggiungere nella sezione "Archivi digitali personalizzati" questo	##
 ##   addon su HACS aggiungendo questo indirizzo come INTEGRAZIONE:      ##

@@ -4,15 +4,15 @@ Questo è il mio primo package perciò siate clementi nel caso incontriate diffi
 
 Questi 2 package comprendono la gestione di un condizionatore smart e non-smart, gestendo l'accensione e lo spegnimento in caso di apertura di una o piu finestre, e avere delle notifiche su alexa quando viene spento o riacceso il condizionatore.
 
+Prima cosa da fare prima i procedere con l'installazione del package, bisogna creare la cartella package all'interno del nostro server di home assistant:
+  
+  Si puo utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) o [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
+  
 
 <b>PACKAGE PER CONDIZIONATORI NON SMART</b>
 
 *INSTALLAZIONE PACKAGE*
 
-Prima cosa da fare è creare la cartella package all'interno del nostro server di home assistant:
-  
-  Si puo utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) o [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
-  
   - Per non complicare il codice ho preferito usare delle scene, quindi assicurarsi che il nostro telecomando universale sia installato e funzionante su Home assistant e quindi creare delle scene come segue:
 
         scene.heat ----> creare una scena che invia il comando IR al condizionatore impostandolo su Caldo

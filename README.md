@@ -16,7 +16,7 @@ Per installare questo package è necessario:
 
 *INSTALLAZIONE PACKAGE*
 
-  - Per non complicare il codice ho preferito usare delle scene da richiamare quando si usa il selettore delle varie modalità su *Condizionatore Virtuale*, quindi assicurarsi che il nostro telecomando universale sia installato e funzionante su Home assistant e quindi creare delle scene su Home Assistant con i seguenti nomi delle entità *scene*:
+  - Per non complicare il codice ho preferito usare delle scene da richiamare quando si usa il selettore delle varie modalità su *Condizionatore Virtuale*, quindi assicurarsi che il nostro telecomando universale sia installato e funzionante su HA e quindi creare delle scene su HA con i seguenti nomi delle entità *scene*:
 
         scene.heat        # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Caldo
         scene.cool        # ----> creare una scena che invia il comando IR al condizionatore impostandolo su Freddo

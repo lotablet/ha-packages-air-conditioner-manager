@@ -10,9 +10,9 @@ Per installare questo package è necessario:
       Si possono utilizzare gli addon [Samba share](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md) oppure [File Editor](https://github.com/home-assistant/addons/blob/master/configurator/README.md) per creare la cartella.
   - Avere il componente [Alexa](https://github.com/alandtse/alexa_media_player) installato e funzionante.
   - Avere Home Assistant aggiornato all'ultima versione.
-  - Avere uno o piu sensori che rilevano apertura e chiusura di una finestra/portafinestra
+  - Avere uno o piu sensori che rilevano apertura e chiusura di una o piu finestre
   - In caso di condizionatore non-Smart, avere un telecomando IR universale (es. Broadlink, Tuya, etc.
-  - In caso di condizionatore non-Smart, avere un sensore che rileva l'assorbimento (powermeter)
+  - In caso di condizionatore non-Smart, avere un sensore che rileva l'assorbimento del condizionatore (powermeter)
 
 
 <b>PACKAGE PER CONDIZIONATORI NON SMART</b>

@@ -641,7 +641,8 @@ automation:
                 message: *messaggioaccendi
               action: notify.alexa_media
   mode: single
-- alias: Package Gestione Condizionatore - Salva Ultima Modalità
+- id: '6384648283658272658463323'
+  alias: Package Gestione Condizionatore - Salva Ultima Modalità
   description: Salva la modalità prima di spegnere il condizionatore
   trigger:
     - platform: state

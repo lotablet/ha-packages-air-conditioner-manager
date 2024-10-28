@@ -80,7 +80,8 @@ sensor:
 #
 #
 automation:
-- alias: Package Gestione Clima - Clima con trigger finestra
+- id: '6384648283658272658463394'
+  alias: Package Gestione Clima - Clima con trigger finestra
   description: ""
   trigger:
     - platform: state
@@ -280,7 +281,8 @@ automation:
               data:
                 target: *alexa
                 message: "Riaccendo il condizionatore in modalità Caldo"
-- alias: Package Gestione Clima - Clima Gia Acceso
+- id: '6384648283658272658463390'
+  alias: Package Gestione Clima - Clima Gia Acceso
   description: ""
   trigger:
     - platform: state

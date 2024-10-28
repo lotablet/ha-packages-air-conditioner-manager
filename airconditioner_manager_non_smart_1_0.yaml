@@ -171,7 +171,8 @@ sensor:
 #
 #
 automation:
-- alias: Package Gestione Clima - Clima Gia Acceso
+- id: '6384648283658272658463384'
+  alias: Package Gestione Clima - Clima Gia Acceso
   description: ""
   trigger:
     - platform: state
